@@ -1,0 +1,28 @@
+{
+  "name": "vertiso/websiteInstallator",
+  "type": "library",
+  "description": "PHP library to installation websites on server. Supported CMS: Wordpress.",
+  "license": "MIT",
+  "keywords": [
+    "library", "php", "wordpress", "cms"
+  ],
+  "authors": [
+    {
+      "name": "Marcin Zagórski",
+      "email": "vertiso851@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "touki/ftp": "^1.2",
+    "phpseclib/phpseclib": "^2.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vertiso\\WebsiteInstallator\\": "src/WebsiteInstallator/"
+    }
+  }
+}
