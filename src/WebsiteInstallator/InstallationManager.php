@@ -78,23 +78,6 @@ class InstallationManager
     }
 
     /**
-     * @param $originalDomain
-     * @param $newDomain
-     * @throws Exception\WebsiteInstallatorException
-     */
-    public function changeDomainName($originalDomain, $newDomain)
-    {
-        $originalDomainFolder = str_replace('/public_html', '', $this->getSshPathToRoot());
-        $newDomainFolder = str_replace($originalDomain, $newDomain, $originalDomainFolder);
-
-        $newDomainFolderTmp = $newDomainFolder . '1';
-
-        $this->client->getSSH()->rename($newDomainFolder, $newDomainFolderTmp);
-        $this->client->getSSH()->rename($originalDomainFolder, $newDomainFolder);
-        $this->client->getSSH()->rename($newDomainFolderTmp, $originalDomainFolder);
-    }
-
-    /**
      * @param $sqlFile
      * @throws Exception\WebsiteInstallatorException
      */
